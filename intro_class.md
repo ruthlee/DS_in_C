@@ -1,4 +1,4 @@
-## Class 1: 9/3/2019 and Class 2
+## Class 1: 9/3/2019 and Class 2: 9/5/2019
 
 Note for vim: to start code use the block code syntax. Three backwards quotes with the language indicated. Example: 
 
@@ -43,7 +43,7 @@ int main()
 - basic idea is that if we compile things seperately for different tasks we can string them together into one big executable for big projects
 - gcc command reads syntax, turns it into commands for computer, turns into ```hello.o```
 - After compiling, we link by doing ```gcc hello.o``` which makes ```a.out```. Compile and link separately so you can compile one thing among many files instead of all of them every time.
-- ```gcc -c -g -Wall hello.c```
+- ```gcc -c -g -Wall hello.c``` not sure what this does but looked interesting
 - ```gcc -o hello hello.o``` changes name of executable
 - ```gcc -c hello.c``` will just compile and make the ```hello.o```, compile with ```gcc hello.o```
 
