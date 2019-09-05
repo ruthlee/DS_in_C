@@ -1,6 +1,6 @@
 ## Class 1: 9/3/2019 and Class 2: 9/5/2019
 
-Note for vim: to start code use the block code syntax. Three backwards quotes with the language indicated. Example: 
+Note for markdown: to start code use the block code syntax. Three backwards quotes with the language indicated. Example: 
 
 ```C
 int main()
