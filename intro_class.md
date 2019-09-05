@@ -17,7 +17,7 @@ int main()
 - UNIX is a specification for OS 
 - LINUX emulates UNIX system (LINUX = set of tools which emulate UNIX environments) 
 
-### Useful Info
+### Useful Command Line Info
 - In CLOC, home directory is \students 
 - ```man [bash command]``` gives manual for command
 - ```ls -l``` folder info
