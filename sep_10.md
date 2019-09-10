@@ -21,9 +21,9 @@ Style Notes
 - header file tells us of existance of function without duplicating into .o files. When we go to link .o files together, one of those has to have implementation for the make to work. 
 
 COMPILING AND HEADERS
-```gcc -c main.c```
-```gcc -c myadd.c```
-```gcc myadd.o main.o``` order here for linkage doesn't matter
+- ```gcc -c main.c```
+- ```gcc -c myadd.c```
+- ```gcc myadd.o main.o``` order here for linkage doesn't matter
 - if you don't link and compile like this (for example, directly trying to compile main.o, then it won't compile because it doesn't have the add file)
 - if you make changes to main, don't need to re-compile all of the functions from the header. 
 - just need to recompile things with errors, then re-link (not recompile everything)
