@@ -44,7 +44,7 @@ x ^ y
 
 11001
 ```
-Statements
+### Statements
 ```C
 if(A) {
 } else if (B) {
@@ -92,3 +92,39 @@ goto LABEL;
 
 AFTER_LOOP:
 ```
+
+### Variable Scoping (comes up in midterm!!)
+```C
+int x; 
+x = 0;
+{
+    int x;
+    x = 1;
+    printf("%d", x);
+}
+printf("%d", x);
+```
+would print ```1 0```. Curly braces create an inner scope which create a blank space to delcare variables. When the braces end, you go back to your original thing. 
+
+```
+int x;
+x = 0;
+{
+    int x;
+    x = 1;
+    printf("%d", y);
+}
+printf("%d", y);
+```
+Would result in an error because y hasn't been defined in the global scope. Variables get de-allocated when you leave inner scope. 
+
+- static variables
+    - not stack or heap allocated; live somewehere else. 
+    - ```static int file_static = 0;``` is only visible within this file. 
+- shouldn't use global variables 
+
+### Process Address Space
+- Structure of program: automatic variables allocated and deallocated from memory. It can grow and shrink whenever you run program
+- local variables are placed on stack. As you leave scopes, they get de-allocated.
+- manually allocated variables are allocated on heap. 
+
