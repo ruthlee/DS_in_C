@@ -53,7 +53,7 @@ if(A) {
 
 if (A)
     // statement
-    x = 4; # only the x is in the if statement 
+    x = 4; // only the x is in the if statement 
     y = 5;
 
 if (A)
@@ -61,7 +61,7 @@ if (A)
     if (B)
         y = 5;
 else
-    x = 3; # WRONG: else binds to closes if in the absence of braces
+    x = 3; // WRONG: else binds to closes if in the absence of braces
 ```
 - always use curly braces to avoid that last thing
 - switches cascade, so always use breaks 
@@ -73,15 +73,15 @@ while(expression {
 
 do {
 
-} while (expression) # difference: second does something before iteration; useful if you have to do something before evaluating all the other cases
+} while (expression) // difference: second does something before iteration; useful if you have to do something before evaluating all the other cases
 
 for(initializer; expression; recursion){
 
 }
 
 for(int i = 0; i < list_length; ++i){
-    continue; # whatever is left in the body of the loop ignore, jump to the next iteration of the loop and evaluate again
-    break; # jump out of loop
+    continue; // whatever is left in the body of the loop ignore, jump to the next iteration of the loop and evaluate again
+    break; // jump out of loop
 }
 
 # tag
