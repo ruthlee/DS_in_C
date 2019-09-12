@@ -13,12 +13,12 @@
     - long vs long long, C doesn't specify byte sizes
 - to specify byte sizes, use ```int<N>_t``` types
     - e.g., ```int8_t``` or ```int16_t```
-    - ```include <stdint.h>
+    - ```include <stdint.h>```
 - everything is two's complement underneath
 - variable declaration examples
     - ```int x = 4, y = 4;```
     - ```char c = 'x';``` must use single quotes
-    - ```char c = '\n';
+    - ```char c = '\n';```
     - ASCII table would show how things are actually stored
     - THIS IS IMPORTANT: ```char c = 0``` is the character zero (null character in ASCII), ```char c = '\0'``` the digit zero same as ```char c = 0;``` (this is character 0 vs value 0). 
     - ```long x = 0L;``` the L at the end means it's a long literal of 0 (not an integer) 
@@ -44,4 +44,51 @@ x ^ y
 
 11001
 ```
+Statements
+```C
+if(A) {
+} else if (B) {
+} else {
+}
 
+if (A)
+    // statement
+    x = 4; # only the x is in the if statement 
+    y = 5;
+
+if (A)
+    x = 4;
+    if (B)
+        y = 5;
+else
+    x = 3; # WRONG: else binds to closes if in the absence of braces
+```
+- always use curly braces to avoid that last thing
+- switches cascade, so always use breaks 
+
+```C
+while(expression {
+
+}
+
+do {
+
+} while (expression) # difference: second does something before iteration; useful if you have to do something before evaluating all the other cases
+
+for(initializer; expression; recursion){
+
+}
+
+for(int i = 0; i < list_length; ++i){
+    continue; # whatever is left in the body of the loop ignore, jump to the next iteration of the loop and evaluate again
+    break; # jump out of loop
+}
+
+# tag
+LABEL:
+
+# jump to a line number
+goto LABEL;
+
+AFTER_LOOP:
+```
