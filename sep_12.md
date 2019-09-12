@@ -106,7 +106,7 @@ printf("%d", x);
 ```
 would print ```1 0```. Curly braces create an inner scope which create a blank space to delcare variables. When the braces end, you go back to your original thing. 
 
-```
+```C
 int x;
 x = 0;
 {
