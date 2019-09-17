@@ -33,4 +33,5 @@ x = ++i;
 - no global variable/ static variable stuff. Don't use it! 
 - Scoping will be tested and it will cause bugs
 
-
+### Makefiles
+- The order doesn't really matter but the executable + dependencies should come first. 
