@@ -45,12 +45,31 @@ def fact(n):
     - recursion: we have n variables. When we call factorial within factorial, we call it again. And again. For n times.  
     - explicit: we have two variables
     - Recursive algorithm is worse in terms of space complexity. (generally true) 
-- *Reminder: n = 1, x = (n--); n is equal to the old value of n *
+- *Reminder: n = 1, x = (n--); n is equal to the old value of n*
     - *x = (--n); n is equal to the new value of x (0)*
     - *in both cases, x = 0.*
-- **Three rules for writing recursive functions:
-    1. Well-behaved basis
-    2. Induction goes towards the basis
-    3. Have faith- believe f(n-1), check the rest. **
+- **Three rules for writing recursive functions:**
+    1. **Well-behaved basis**
+    2. **Induction goes towards the basis**
+    3. **Have faith- believe f(n-1), check the rest**
 
 - Factorial time complexity is the worst you could possibly have. 
+
+### Fibonacci
+- Base cases are n = 1 and n = 2. 
+- Can draw a tree - a **call stack**
+    - If you draw out the call stack and everything it calls (i.e., for fib of 5 you solve 4 and 3, then you solve 3 twice more and 2 three times, etc.) So you execute things that you don't need to 
+- Time complexity is no longer linear. 
+
+### Selection Sort
+- I have bunch of numbers in a list. Algorithm is outer loop of looping through positions and inner loop is keeping track of smallest number.
+    - ex. in ```[3 5 1 4 2 0]```
+    - Increment through, find the number which is the smallest number smaller than the first number you see, swap the two numbers.
+    - Continue until all the numbers in the list are sorted. 
+- Go to visualgo.net
+
+```C
+random() % 100 // generates a random number between 0 and 99
+```
+- C is zero-indexed
+- **Base case:** The absence of doing anything. If yu loop through the whole list and nothing is smaller than the first value, then you're done. 
