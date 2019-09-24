@@ -53,17 +53,17 @@ for ith position and n elements;
 - A **pointer variable** allows us to modify stuff outside of a function
 
 ```C
-int *p; \\ defines a pointer variable
+int *p; // defines a pointer variable
 ```
 - p is some alias to a bucket in memory, but the value is not an integer, it's an ID of another bucket. 
 
 ```C
-p = &x \\ the address of the variable x
-int *p = &x; \\ take the address of x and assign that address to p (* is part of a type)
-char *p = &c; \\ taking the address of a char and assigning it to c
-y = *p; \\ means follow the pointer to its underlying bucket and grab value (* is operator which will get the thing at address p)
-*p = 0; \\ means we go to the address and put in 0 (setting the bucket)  
-(*p)++; \\ need parenthesis; order of operations is right to left
+p = &x // the address of the variable x
+int *p = &x; // take the address of x and assign that address to p (* is part of a type)
+char *p = &c; // taking the address of a char and assigning it to c
+y = *p; // means follow the pointer to its underlying bucket and grab value (* is operator which will get the thing at address p)
+*p = 0; // means we go to the address and put in 0 (setting the bucket)  
+(*p)++; // need parenthesis; order of operations is right to left
 ```
 - Pointers are typed
     - if I have address of char, I can only put chars in it; same for other types
@@ -71,7 +71,7 @@ y = *p; \\ means follow the pointer to its underlying bucket and grab value (* i
     - type safety on pointer
 
 ```C
-void *pv; \\ a generic pointer; can turn it into the type you need have to cast it before dereferencing
+void *pv; // a generic pointer; can turn it into the type you need have to cast it before dereferencing
 ```
 - Segmentation fault = you accessed memory that you weren't using and didn't plan to use
     - You never tried to allocated memory, program will die
@@ -83,7 +83,7 @@ void *pv; \\ a generic pointer; can turn it into the type you need have to cast 
 
 ```C
 char *q = 0;
-if (*q) \\ crash! can't dereference null
+if (*q) // crash! can't dereference null
 ```
 - Can assign variables to address (pointer to an address) 
 - Can get two levels away from an int by pointing to a pointer. 
@@ -106,4 +106,8 @@ a[10] = 300; // will compile but will get some kind of error
 int a[] = {100, 200, 300}
 int b[10] = { 1 } // any skipped values initialize to 0. 
 char c[] = "abc" // short-hand for char c[] = {'a', 'b', 'c', '\0'}; i.e., strings are arrays of characters
+sizeof(a) // gives size of the thing IN BYTES
 ```
+- int is 4 bytes, an array of 10 ints is 40 bytes.  
+    - if you're trying to iterate over an array if ints, you need to make sure to divide sizeof(array) by 4 in order to properly iterate over the array (```sizeof(a)/sizeof(a[0])```)
+- There is a relationship between arrays and pointers which we will see next time. 
