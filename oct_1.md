@@ -27,7 +27,7 @@ char c[] = "abc"; // sizeof(c) = 4
 - CAN change pointer, but CANNOT change array 
 - Indexing a list is O(n) because it only takes one addition operation to get to any index position (```a[5] = *(a+5)```)
 - ```int x = q - p;``` where q and p are both pointers subtracts positions of the positions 
-- ```C
+```C
 *(0+a) = // a is an address, 0 + a is the address, then we dereference it
 0[a] = a[0] // a[b] is address a offset by b. This means offset 0 by a and dereference.
 ```
