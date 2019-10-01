@@ -67,9 +67,6 @@ char c[] = "abc"; // sizeof(c) = 4
 - C does not have memory management, so we have to do it ourselves.
 - We want inner scope to feed to outer scope WITHOUT global variable
 - SOLUTION: next time. 
-```
-
-```
 - What happens if you mismanage memory? 
     - if you forget to clean up, OS allocates memory and deleted pointer to first element but not the stuff itself; memory from program grows and grows and grows and can't stop (memory leakage) 
     - Ex. chrome :) 
