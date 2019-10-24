@@ -7,7 +7,7 @@
     - could have just copied parts of code from hw
 - Q3:
     - valgrind heap summary: 16 bytes (8 for double, 8 for pointer) in 1 block, 10 allocs, 9 frees, 160 bytes allocated, 1 error from 1 context (0 in 0 context is fine if you assume leaks aren't counted). 
-- Q4: ``` char*, char*, int**, 24, invalid, int**, 8, '\0', 'b', char*, invalid, 'b', invalid (can't increment fixed size array) 
+- Q4: ``` char*, char*, int**, 24, invalid, int**, 8, '\0', 'b', char*, invalid, 'b', invalid (can't increment fixed size array)``` 
     - x is array of 3 pointers, y is a pointer to an array of size 3
 
 ### Why C++?
@@ -37,7 +37,7 @@
 - We have pass by reference now. 
 ```C++
 void swap(int &x, int &y){
-\\ ampersand means int reference type. It means that we actually just give it the thing from the outside
+// ampersand means int reference type. It means that we actually just give it the thing from the outside
     int temp = x;
     x = y;
     y = x;
